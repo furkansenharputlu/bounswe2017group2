@@ -43,7 +43,7 @@ public interface RestInterfaceController {
     Call<UserDto> getUserProfile(@HeaderMap Map<String, String> headermap);
 
     @POST("/concert/{id}/subscribe/")
-    Call<ConcertResponse> attend(@Path("id") int id, @HeaderMap Map<String, String> headermap);
+    Call<Void> attend(@Path("id") int id, @HeaderMap Map<String, String> headermap);
 
     @POST("/concert/{id}/unsubscribe/")
     Call<ConcertResponse> unAttend(@Path("id") int id, @HeaderMap Map<String, String> headermap);
